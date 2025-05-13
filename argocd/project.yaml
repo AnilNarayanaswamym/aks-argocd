@@ -19,8 +19,12 @@ spec:
   # - namespace: '*'
   #   server: '!https://team1-*'
   #   # Any other namespace or server is fine though.
-  # - namespace: '*'
-  #   server: '*'
+  - namespace: 'dev'
+    server: 'https://kubernetes.default.svc'
+  - namespace: 'qa'
+    server: 'https://kubernetes.default.svc'
+  - namespace: 'sit'
+    server: 'https://kubernetes.default.svc'
   # clusterResourceWhitelist:
   # - group: '*'
   #   kind: '*'
