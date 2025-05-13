@@ -1,0 +1,7 @@
+replicaCount: 1
+image:
+  repository: mcr.microsoft.com/dotnet/samples
+  tag: aspnetapp
+nodeSelector:
+  "kubernetes.io/os": windows
+  "agentpool": wpool

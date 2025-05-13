@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app-dev
+  namespace: argocd
+spec:
+  project: project-apps
+  source:
+    repoURL: https://github.com/AnilNarayanaswamym/aks-argocd.git
+    targetRevision: HEAD
+    path: charts/my-app   # or path to your Helm chart
+    helm:
+      valueFiles:
+        - values-dev.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    automated: {}
