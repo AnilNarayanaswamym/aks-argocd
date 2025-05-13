@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-app-dev
+  name: my-app-sit
   namespace: argocd
 spec:
   project: project-apps
@@ -11,10 +11,10 @@ spec:
     path: my-app/charts/sample-app   # or path to your Helm chart
     helm:
       valueFiles:
-        - values-dev.yaml
+        - values-sit.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev
+    namespace: sit
   syncPolicy:
     automated:
       selfHeal: true

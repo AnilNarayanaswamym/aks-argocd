@@ -1,0 +1,11 @@
+replicaCount: 2
+image:
+  repository: mcr.microsoft.com/dotnet/samples
+  tag: aspnetapp
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8080
+nodeSelector:
+  "beta.kubernetes.io/os": windows
+  "kubernetes.azure.com/agentpool": wpool1
