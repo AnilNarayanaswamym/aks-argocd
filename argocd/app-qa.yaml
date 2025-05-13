@@ -6,7 +6,7 @@ metadata:
 spec:
   project: project-apps
   source:
-    repoURL: https://github.com/AnilNarayanaswamym/aks-argocd.git
+    repoURL: 'https://github.com/AnilNarayanaswamym/aks-argocd.git'
     targetRevision: HEAD
     path: my-app/charts/my-app   # or path to your Helm chart
     helm:
